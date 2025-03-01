@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title-bar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #5d8f90;
+}
+
+.title-bar img {
+  width: 140px;
+  border-radius: 20px;
+  margin-left: 30px;
+  border: 4px solid white;
+}
+
+.title-text {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 0;
+}
+
+.job-title {
+  font-size: 24px;
+  font-weight: normal;
+  font-family: Arial;
+  color: white;
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+}
+
+.side-bar {
+  width: 20%;
+  padding: 10px;
+  background-color: #e0e0e0;
+}
+.side-bar h3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 5px;
+  color: #504642;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.profile {
+  padding: 5px;
+  text-align: left;
+}
+.contact-me {
+  margin-top: 20px;
+  padding: 5px;
+  text-align: left;
+}
+.contact-me h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.contact-me ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 15px;
+}
+.contact-me ul li {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.contact-me ul li img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.main-info {
+  flex: 1;
+  padding: 20px;
+  color: #504642;
+  background-color: whitesmoke;
+}
+.education,
+.skills {
+  margin-bottom: 18px;
+  padding: 10px;
+  width: 40%;
+}
+
+.institute {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.year {
+  margin-bottom: 10px;
+}
+.College {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.skills ul,
+.projects ul {
+  list-style-type: none;
+  padding: 0;
+}
+.skills ul li,
+.projects ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.language {
+  padding: 10px;
+  width: 40%;
+}
+
+.education p,
+.profile p {
+  font-size: 18px;
+}
+
+.language p {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.experience {
+  padding: 10px;
+  width: 40%;
+  position: absolute;
+  right: 20px;
+  top: 198px;
+}
+.experience p {
+  font-size: 18px;
+}
+.projects {
+  padding: 10px;
+  width: 40%;
+  position: absolute;
+  right: 20px;
+  top: 419px;
+}
+
+.education h3,
+.skills h3,
+.language h3,
+.experience h3,
+.projects h3 {
+  margin-bottom: 10px;
+  background-color: #d7d8d8;
+  padding: 3px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
