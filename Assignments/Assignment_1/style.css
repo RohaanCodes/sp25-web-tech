@@ -6,7 +6,6 @@
 
 .title-bar {
   display: flex;
-  align-items: center;
   padding: 20px;
   background-color: #5d8f90;
 }
@@ -30,7 +29,6 @@
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  margin: 0;
 }
 
 .job-title {
@@ -38,7 +36,6 @@
   font-weight: normal;
   font-family: Arial;
   color: white;
-  margin: 0;
 }
 
 .content {
