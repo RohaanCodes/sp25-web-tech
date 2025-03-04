@@ -29,6 +29,7 @@
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+  margin: 0;
 }
 
 .job-title {
@@ -36,6 +37,7 @@
   font-weight: normal;
   font-family: Arial;
   color: white;
+  margin: 0;
 }
 
 .content {
@@ -148,7 +150,7 @@
   width: 40%;
   position: absolute;
   right: 20px;
-  top: 419px;
+  top: 425px;
 }
 
 .education h3,
