@@ -64,6 +64,12 @@
   color: #001f49;
   font-family: Futura, Arial;
 }
+.logo a {
+    text-decoration: none;
+    color: inherit; 
+    font-family: inherit;  
+}
+
 .video-container {
   position: relative;
 }
