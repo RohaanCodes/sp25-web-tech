@@ -27,27 +27,27 @@
     </div>
 </div>
   
-    <nav class="nav-bar navbar navbar-expand-lg sticky-top bg-white shadow-sm">
-        <div class="container">
-            <button class="navbar-toggler d-lg-none order-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand logo mx-auto d-lg-none order-1" href="landingPage.html">Charles Tyrwhitt</a>
-            <a class="navbar-brand logo d-none d-lg-block order-0" href="landingPage.html">Charles Tyrwhitt</a>
-            <div class="collapse navbar-collapse order-2 order-lg-1" id="navbarNav">
-                <ul class="navbar-nav menu">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Shirts</a>
-                        <div class="dropdown-menu w-100">
-                            <div class="container dropdown-content">
-                                <div class="dropdown-text">
-                                    <h3>Premium Shirts Collection</h3>
-                                    <p>Explore our latest range of stylish and comfortable shirts.</p>
-                                </div>
-                                <img src="assets/shirts.jpg" alt="Shirts" class="dropdown-img">
+<nav class="nav-bar navbar navbar-expand-lg sticky-top bg-white shadow-sm">
+    <div class="container">
+        <button class="navbar-toggler d-lg-none order-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand logo mx-auto d-lg-none order-1" href="landingPage.html">Charles Tyrwhitt</a>
+        <a class="navbar-brand logo d-none d-lg-block order-0" href="landingPage.html">Charles Tyrwhitt</a>
+        <div class="collapse navbar-collapse order-2 order-lg-1" id="navbarNav">
+            <ul class="navbar-nav menu">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Shirts</a>
+                    <div class="dropdown-menu w-100">
+                        <div class="container dropdown-content">
+                            <div class="dropdown-text">
+                                <h3>Premium Shirts Collection</h3>
+                                <p>Explore our latest range of stylish and comfortable shirts.</p>
                             </div>
+                            <img src="assets/shirts.jpg" alt="Shirts" class="dropdown-img">
                         </div>
-                    </li>
+                    </div>
+                </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Polos</a>
                             <div class="dropdown-menu w-100">
@@ -261,7 +261,8 @@
 
     <footer class="footer bg-light py-5">
         <div class="container">
-            <div class="row g-4">
+            <!-- Desktop Grid Layout -->
+            <div class="row g-4 d-none d-md-flex">
                 <div class="col-lg-3 col-md-6 footer-section">
                     <h4>Help</h4>
                     <ul class="list-unstyled">
@@ -301,8 +302,59 @@
                         <li>Life at CT</li>
                     </ul>
                 </div>
-                <!-- Add other footer sections -->
             </div>
+    
+            <!-- Mobile Dropdown Layout -->
+            <div class="footer-mobile d-md-none">
+                <div class="footer-section">
+                    <h4 data-bs-toggle="collapse" data-bs-target="#helpCollapse" aria-expanded="false" aria-controls="helpCollapse">Help</h4>
+                    <div class="collapse" id="helpCollapse">
+                        <ul class="list-unstyled">
+                            <li>FAQs</li>
+                            <li>Shipping</li>
+                            <li>Returns</li>
+                            <li>Size Guides</li>
+                            <li>Shirt Multibuy</li>
+                            <li>Find a Store</li>
+                            <li>Contact Us</li>
+                            <li>Where is my order?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 data-bs-toggle="collapse" data-bs-target="#legalCollapse" aria-expanded="false" aria-controls="legalCollapse">Legal Info</h4>
+                    <div class="collapse" id="legalCollapse">
+                        <ul class="list-unstyled">
+                            <li>Terms & Conditions</li>
+                            <li>Privacy Policy</li>
+                            <li>Cookies Policy</li>
+                            <li>Accessibility</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 data-bs-toggle="collapse" data-bs-target="#moreInfoCollapse" aria-expanded="false" aria-controls="moreInfoCollapse">More Info</h4>
+                    <div class="collapse" id="moreInfoCollapse">
+                        <ul class="list-unstyled">
+                            <li>Refer a Friend</li>
+                            <li>Gift Cards</li>
+                            <li>Student Discount</li>
+                            <li>Affiliate Program</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 data-bs-toggle="collapse" data-bs-target="#careersCollapse" aria-expanded="false" aria-controls="careersCollapse">Careers</h4>
+                    <div class="collapse" id="careersCollapse">
+                        <ul class="list-unstyled">
+                            <li>Job Opportunities</li>
+                            <li>Internships</li>
+                            <li>Life at CT</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
             <hr class="separator">
             <div class="card-info text-center">
                 <img src="./assets/unlock.png" alt="" class="img-fluid">
@@ -314,7 +366,7 @@
                 <img src="./assets/card.png" alt="Visa" class="img-fluid">
                 <img src="./assets/apple-pay.png" alt="Visa" class="img-fluid">
                 <img src="./assets/google-pay.png" alt="Visa" class="img-fluid">
-                <!-- Add other payment icons -->
+               
             </div>
             <hr class="separator">
             <div class="copyright text-center">
