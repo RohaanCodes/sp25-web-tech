@@ -1,0 +1,326 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Top Bar */
+.top {
+    background-color: white;
+}
+
+.left {
+    color: #001f49;
+}
+
+.top-icon {
+    width: 15px !important;
+    height: auto;
+    margin: 0 10px;
+}
+
+.right {
+    color: #001f49;
+}
+
+.tagline {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #5b5f65;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #001f49;
+    font-family: Futura, Arial;
+}
+
+.navbar-nav.menu {
+    gap: 20px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #001f49;
+    font-family: Futura, Arial;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Dropdown styling */
+.dropdown-menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: none;
+    z-index: 1001;
+}
+
+.dropdown-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dropdown-text {
+    max-width: 50%;
+}
+
+.dropdown-text h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #001f49;
+}
+
+.dropdown-text p {
+    font-size: 14px;
+    color: #333;
+}
+
+.dropdown-img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.options .nav-icon {
+    width: 30px !important;
+    height: 30px !important;
+    object-fit: contain;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+    .nav-bar {
+        padding: 10px;
+    }
+
+    .navbar-nav.menu {
+        gap: 0;
+        text-align: right; /* Task 2: Align menu items to the right */
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .navbar-brand.logo {
+        margin: 0;
+    }
+
+    .options {
+        justify-content: flex-end;
+        padding: 10px 0;
+    }
+
+    /* Task 4: Hide options in the collapsed menu */
+    #navbarNav .options {
+        display: none;
+    }
+}
+
+/* Desktop: Hover effect */
+@media (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+/* Banner */
+.overlay-text {
+    top: 45%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    color: #ffd000;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: left;
+    padding: 20px;
+    text-transform: uppercase;
+    font-family: "Salesforce Sans", sans-serif;
+    line-height: 1.5;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.overlay-text p {
+    margin-bottom: 12px;
+}
+
+.h-white {
+    color: white;
+    font-weight: 100;
+}
+
+.buttons .btn {
+    min-width: 230px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.buttons .btn:hover {
+    color: white;
+    background-color: #373737;
+}
+
+/* Task 5: Mobile button adjustments */
+@media (max-width: 991px) {
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+ 
+        padding: 0 20px;
+        
+        
+    }
+
+    .buttons .btn-mobile {
+        min-width: 100%; /* Full width on mobile */
+        height: 50px; /* Smaller height for mobile */
+        font-size: 14px; /* Adjust font size */
+        background-color: rgba(255, 255, 255, 0.7); /* White with 50% transparency */
+
+    }
+
+    .overlay-text {
+        top: 50%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%);
+        padding: 0; /* Remove extra padding */
+    }
+}
+.services {
+    background-color: #f5f5f5; /* Matches original bg-light */
+}
+
+/* Cards styling (applies to both grid and carousel) */
+.cards {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.cards img {
+    width: 15%; /* Matches original .services .cards img { width: 15%; } */
+    margin-bottom: 10px;
+}
+
+.cards h5 {
+    margin: 10px 0; /* Matches original */
+    font-size: 16px; /* Adjust if needed to match your design */
+}
+
+.cards p {
+    font-size: 14px; /* Matches original */
+    margin: 0;
+}
+
+/* Carousel-specific adjustments */
+.services-carousel .carousel-item {
+    padding: 20px; /* Adds some breathing room around each card */
+}
+
+.services-carousel .cards {
+    display: block; /* Ensures full width within carousel item */
+}
+
+/* Ensure carousel arrows are styled */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%; /* Slightly wider clickable area */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+     
+    background-color: grey; /* Matches your brand color */
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Subscribe */
+.subscribe p {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.subscribe .btn-primary {
+    width: 45px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #001f49;
+}
+
+.subscribe .btn-primary:hover {
+    background-color: #0056b3;
+}
+.footer-section h4 {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.footer-section ul li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.footer-section ul li:hover {
+    text-decoration: underline;
+}
+
+.separator {
+    width: 50%;
+    margin: 20px auto;
+}
+
+.card-info img {
+    width: 50px;
+    margin: 0 5px;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #777;
+}
+
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #001f49;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chat-button img {
+    width: 40px;
+    height: 40px;
+}
