@@ -1,0 +1,31 @@
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #001f49;
+    font-family: Futura, Arial;
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545;
+}
+.invalid-feedback {
+    display: none;
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 4px;
+}
+.form-control.is-invalid ~ .invalid-feedback {
+    display: block;
+}
+.btn-primary {
+    background-color: #001f49;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
