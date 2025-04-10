@@ -97,10 +97,11 @@
 
 .dropdown-content {
     display: flex;
-    align-items: center;
+     
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+    flex-direction: column;
 }
 
 .dropdown-text {
@@ -119,7 +120,7 @@
 }
 
 .dropdown-img {
-    width: 150px;
+    width: 100px;
     height: auto;
     border-radius: 5px;
 }
