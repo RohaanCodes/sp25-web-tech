@@ -1,0 +1,155 @@
+<h1 class="checkout-title">Checkout</h1>
+
+<% if (!orderPlaced) { %>
+  <% if (cart.length === 0) { %>
+    <p class="empty-cart-msg">Your cart is empty. <a class="btn-link" href="/products">Shop Products</a></p>
+  <% } else { %>
+    <table class="checkout-table">
+      <thead>
+        <tr><th>Product</th><th>Price</th><th>Quantity</th><th>Subtotal</th></tr>
+      </thead>
+      <tbody>
+        <% let total = 0; %>
+        <% cart.forEach(item => { %>
+          <% const subtotal = item.product.price * item.quantity; %>
+          <% total += subtotal; %>
+          <tr>
+            <td><%= item.product.title %></td>
+            <td>$<%= item.product.price.toFixed(2) %></td>
+            <td><%= item.quantity %></td>
+            <td>$<%= subtotal.toFixed(2) %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+    <h3 class="checkout-total">Total: $<%= total.toFixed(2) %></h3>
+
+    <form class="checkout-form" action="/checkout/confirm" method="POST">
+      <label class="form-label">
+        <input type="checkbox" name="payLater" required />
+        Pay Later (Cash on Delivery)
+      </label><br><br>
+
+      <label class="form-label">Phone:</label><br>
+      <input type="text" name="phone" class="form-input" required /><br><br>
+
+      <label class="form-label">Address:</label><br>
+      <textarea name="address" class="form-textarea" rows="3" required></textarea><br><br>
+
+      <button type="submit" class="btn-primary">Confirm Order</button>
+    </form>
+  <% } %>
+<% } else { %>
+  <div class="confirmation">
+    <p>✅ <strong>Your order has been placed successfully!</strong></p>
+    <p>📦 Expected delivery in <strong><%= deliveryDays %> days</strong>.</p>
+    <a href="/my-orders" class="btn-primary">My Orders</a>
+  </div>
+<% } %>
+
+<style>
+  body {
+    background-color: #f2f6fc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px;
+  }
+
+  .checkout-title {
+    font-size: 36px;
+    color: #002147;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .checkout-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  }
+
+  .checkout-table th, .checkout-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .checkout-table thead {
+    background-color: #002147;
+    color: white;
+  }
+
+  .checkout-total {
+    text-align: right;
+    font-size: 22px;
+    margin-top: 10px;
+    color: #002147;
+  }
+
+  .checkout-form {
+    max-width: 500px;
+    margin-top: 20px;
+  }
+
+  .form-label {
+    font-weight: 600;
+    color: #333;
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  .form-textarea {
+    resize: vertical;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background-color: #002147;
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: #001733;
+  }
+
+  .btn-link {
+    color: #002147;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .confirmation {
+    background-color: #e9f5e9;
+    padding: 20px;
+    border-left: 5px solid #28a745;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .empty-cart-msg {
+    font-size: 18px;
+    color: #444;
+    text-align: center;
+    margin-top: 30px;
+  }
+</style>

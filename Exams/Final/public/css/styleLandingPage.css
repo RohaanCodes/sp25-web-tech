@@ -1,0 +1,423 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 5px 20px;
+  background-color: white;
+}
+
+.left {
+  flex: 1;
+  color: #001f49;
+  text-align: left;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+  text-align: center;
+}
+
+.center img {
+  width: 15px;
+  margin: 0 10px;
+}
+
+.right {
+  flex: 1;
+  color: #001f49;
+  text-align: right;
+}
+
+.tagline {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #5b5f65;
+}
+
+.nav-bar {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #001f49;
+  font-family: Futura, Arial;
+}
+.logo a {
+    text-decoration: none;
+    color: inherit; 
+    font-family: inherit;  
+}
+
+.video-container {
+  position: relative;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 45%;
+  left: 26%;
+  transform: translate(-50%, -50%);
+  color: #ffd000;
+  font-size: 45px;
+  font-weight: bold;
+  text-align: left;
+
+  padding: 20px 20px;
+
+  text-transform: uppercase;
+  font-family: "Salesforce Sans", sans-serif;
+  line-height: 1.5;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.overlay-text p {
+  margin-bottom: 12px;
+}
+.h-white {
+  color: white;
+  font-weight: 100;
+}
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons button {
+  font-size: none;
+  padding: 15px;
+  margin: 5px;
+  min-width: 230px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.5px;
+  border: none;
+}
+.buttons button:hover {
+  color: white;
+  background-color: #373737;
+}
+
+.menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #001f49;
+  font-family: Futura, Arial;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 15px;
+}
+
+.dropdown-menu {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100vw;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1001;
+  padding: 20px;
+}
+
+.dropdown-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-text {
+  max-width: 50%;
+}
+
+.dropdown-text h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #001f49;
+}
+
+.dropdown-text p {
+  font-size: 14px;
+  color: #333;
+}
+
+.dropdown-menu img {
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.row {
+  display: flex;
+  gap: 1px;
+  flex: 1;
+}
+
+.image {
+  flex: 1;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.services {
+  display: flex;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 40px;
+  justify-content: center;
+}
+.cards {
+  flex: 1;
+  flex-direction: space-evenly;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+.cards img {
+  width: 15%;
+}
+.cards h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.cards p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.subscribe {
+  display: flex;
+  width: 100%;
+  background-color: #ebedf3;
+  padding: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.options {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.options .img {
+  width: 30px;
+  height: 30px;
+}
+
+.options .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 30px;
+  background-color: #ebedf3;
+}
+
+.subscribe p {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+  font-weight: 500;
+}
+
+.subscribe input {
+  width: 250px;
+  height: 40px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.subscribe button {
+  width: 45px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #001f49;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscribe button:hover {
+  background-color: #0056b3;
+}
+
+.footer {
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  text-align: left;
+  padding: 10px;
+}
+
+.footer-section h4 {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.footer-section ul li:hover {
+  text-decoration: underline;
+}
+
+.separator {
+  width: 50%;
+  height: 2px;
+  background-color: #ccc;
+  margin: 20px auto;
+}
+
+.card-info {
+  text-align: center;
+  padding: 10px;
+}
+
+.card-info img {
+  width: 50px;
+  margin: 0 5px;
+}
+
+.sponsored {
+  font-size: 14px;
+  color: #666;
+  padding: 10px;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #777;
+  padding: 10px;
+}
+
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  background-color: #001f49;
+  padding: 12px;
+  border-radius: 50%;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-button img {
+  width: 40px;
+  height: 40px;
+}
+
+
+ 

@@ -1,0 +1,107 @@
+<h1>All Vehicles</h1>
+
+<a href="/admin/vehicles/new" class="button-link">➕ Add New Vehicle</a>
+
+<table class="styled-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Brand</th>
+      <th>Type</th>
+      <th>Price</th>
+      <th>Image</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% vehicles.forEach(v => { %>
+      <tr>
+        <td><%= v.name %></td>
+        <td><%= v.brand %></td>
+        <td><%= v.type %></td>
+        <td>$<%= v.price %></td>
+        <td><img src="<%= v.image %>" width="80" style="border-radius: 5px; object-fit: cover;" /></td>
+        <td>
+          <a href="/admin/vehicles/<%= v._id %>/edit" class="action-link">✏️ Edit</a>
+          <form method="POST" action="/admin/vehicles/<%= v._id %>/delete" style="display:inline;">
+            <button type="submit" class="delete-button">🗑️ Delete</button>
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
+
+<style>
+  h1 {
+    color: #001f3f;
+    border-bottom: 2px solid #001f3f;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .button-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    background-color: #001f3f;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+
+  .button-link:hover {
+    background-color: #003366;
+  }
+
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  .styled-table th {
+    background-color: #001f3f;
+    color: white;
+  }
+
+  .styled-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .action-link {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+
+  .action-link:hover {
+    text-decoration: underline;
+  }
+
+  .delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .delete-button:hover {
+    background-color: #b02a37;
+  }
+</style>

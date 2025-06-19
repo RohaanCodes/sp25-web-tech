@@ -1,0 +1,88 @@
+<h1>Edit Vehicle</h1>
+
+<form method="POST" enctype="multipart/form-data" action="/admin/vehicles/<%= vehicle._id %>" class="vehicle-form">
+  <input type="text" name="name" value="<%= vehicle.name %>" placeholder="Vehicle Name" required />
+
+  <input type="text" name="brand" value="<%= vehicle.brand %>" placeholder="Brand" required />
+
+  <input type="number" name="price" value="<%= vehicle.price %>" placeholder="Price ($)" required />
+
+  <select name="type" required>
+    <option value="">Select Type</option>
+    <option value="sedan" <%= vehicle.type === 'sedan' ? 'selected' : '' %>>Sedan</option>
+    <option value="SUV" <%= vehicle.type === 'SUV' ? 'selected' : '' %>>SUV</option>
+    <option value="truck" <%= vehicle.type === 'truck' ? 'selected' : '' %>>Truck</option>
+  </select>
+
+  <label for="image">Change Image:</label>
+  <input type="file" name="image" id="image" />
+
+  <% if (vehicle.image) { %>
+    <div class="preview">
+      <p>Current Image:</p>
+      <img src="<%= vehicle.image %>" width="120" height="80" style="object-fit: cover; border-radius: 5px;" />
+    </div>
+  <% } %>
+
+  <button type="submit">✅ Update Vehicle</button>
+</form>
+
+<style>
+  .vehicle-form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .vehicle-form input,
+  .vehicle-form select {
+    padding: 10px 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border 0.3s;
+  }
+
+  .vehicle-form input:focus,
+  .vehicle-form select:focus {
+    border-color: #001f3f;
+    outline: none;
+  }
+
+  .vehicle-form label {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .vehicle-form button {
+    padding: 12px;
+    background-color: #001f3f;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .vehicle-form button:hover {
+    background-color: #003366;
+  }
+
+  .preview {
+    margin-top: 10px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #001f3f;
+    margin-bottom: 20px;
+  }
+</style>

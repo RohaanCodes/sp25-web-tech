@@ -1,0 +1,53 @@
+<!-- views/admin/dashboard.ejs -->
+<%- include('../partials/header') %>
+
+<h1 class="admin-title">Admin Dashboard</h1>
+
+<div class="admin-links-container">
+  <a href="/admin/products" class="admin-link">Manage Products</a>
+  <a href="/admin/add-product" class="admin-link">➕ Add New Product</a>
+  <a href="/admin/orders" class="admin-link">View Orders</a>
+</div>
+
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6fa;
+    margin: 0;
+    padding: 0;
+  }
+
+  .admin-title {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 32px;
+    color: navy;
+  }
+
+  .admin-links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .admin-link {
+    padding: 14px 24px;
+    font-size: 18px;
+    background-color: navy;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+
+  .admin-link:hover {
+    background-color: #002b5c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  }
+</style>
+
+<%- include('../partials/footer') %>
