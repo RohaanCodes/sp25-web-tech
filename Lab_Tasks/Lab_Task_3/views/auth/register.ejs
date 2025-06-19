@@ -1,0 +1,105 @@
+<h2 class="register-heading">Create an Account</h2>
+
+<div class="register-container">
+  <form method="POST" action="/register" class="register-form">
+    <input type="text" name="name" placeholder="👤 Name" required />
+    <input type="email" name="email" placeholder="📧 Email" required />
+    <input type="password" name="password" placeholder="🔒 Password" required />
+
+    <select name="role" required>
+      <option value="">🎭 Select Role</option>
+      <option value="user">User</option>
+      <option value="admin">Admin</option>
+    </select>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <div class="login-link">
+    <span>Already have an account?</span>
+    <form action="/login" method="GET" style="display:inline;">
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+  </div>
+</div>
+
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f8fb;
+    margin: 0;
+    padding: 0;
+  }
+
+  .register-heading {
+    text-align: center;
+    color: #002147;
+    font-size: 2rem;
+    margin-top: 30px;
+  }
+
+  .register-container {
+    max-width: 400px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 33, 71, 0.1);
+  }
+
+  .register-form input,
+  .register-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+
+  .register-form select {
+    background-color: #f0f4f8;
+  }
+
+  .register-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #002147;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .register-form button:hover {
+    background-color: #004080;
+  }
+
+  .login-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .login-btn {
+    background: none;
+    color: #002147;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 0.95rem;
+  }
+
+  .login-btn:hover {
+    color: #004080;
+  }
+
+  @media (max-width: 480px) {
+    .register-container {
+      margin: 15px;
+      padding: 20px;
+    }
+  }
+</style>

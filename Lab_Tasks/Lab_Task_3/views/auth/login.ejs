@@ -1,0 +1,96 @@
+<div class="login-container">
+  <h2>Login</h2>
+
+  <form class="login-form" method="POST" action="/login">
+    <input type="email" name="email" placeholder="Email" required />
+    <input type="password" name="password" placeholder="Password" required />
+
+    <select name="role" required>
+      <option value="">Select Role</option>
+      <option value="user">User</option>
+      <option value="admin">Admin</option>
+    </select>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <div class="register-prompt">
+    <span>Don't have an account?</span>
+    <form action="/register" method="GET" style="display:inline;">
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</div>
+
+<style>
+  body {
+    background: #f4f7fb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .login-container {
+    max-width: 400px;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+    text-align: center;
+  }
+
+  .login-container h2 {
+    color: #002147;
+    margin-bottom: 25px;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .login-form input,
+  .login-form select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+
+  .login-form button {
+    padding: 12px;
+    background-color: #002147;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .login-form button:hover {
+    background-color: #00132f;
+  }
+
+  .register-prompt {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .register-prompt button {
+    background: none;
+    color: #002147;
+    border: none;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0;
+    margin-left: 6px;
+  }
+
+  .register-prompt button:hover {
+    color: #000;
+  }
+</style>
