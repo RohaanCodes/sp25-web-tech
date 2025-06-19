@@ -1,0 +1,156 @@
+<% if (user && user.role === 'admin') { %>
+  <a href="/admin">Admin Dashboard</a>
+<% } %>
+
+ <div class="chat-button">
+        <img src="/images/chat.png" alt="Chat">
+    </div>
+    
+    <div class="top">
+        <p class="left">Help</p>
+        <div class="center">
+            <img src="/images/back.png" alt="Previous">
+            <span class="tagline">Timeless British Style, Built to Last</span>
+            <img src="/images/next.png" alt="Next">
+        </div>
+        <p class="right">Find a store</p>
+    </div>
+    
+
+  
+    <div class="nav-bar">
+        <div class="logo">
+            <a href="/landingPage">
+                <p>Charles Tyrwhitt</p>
+            </a>
+        </div>
+        
+        <div class="menu">
+            <ul>
+                <li class="dropdown">
+                    Shirts
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <div class="dropdown-text">
+                                <h3>Premium Shirts Collection</h3>
+                                <p>Explore our latest range of stylish and comfortable shirts.</p>
+                            </div>
+                            <img src="/images/shirts.jpg" alt="Shirts">
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    Polos
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <div class="dropdown-text">
+                                <h3>Classic Polos</h3>
+                                <p>Discover premium polos, perfect for any occasion.</p>
+                            </div>
+                            <img src="/images/polos.jpg" alt="Polos">
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    Suits
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <div class="dropdown-text">
+                                <h3>Luxury Suits</h3>
+                                <p>Find the perfect suit for formal and casual wear.</p>
+                            </div>
+                            <img src="/images/suits.jpg" alt="Suits">
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="dropdown">
+                    Pants
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <div class="dropdown-text">
+                                <h3>Luxury Suits</h3>
+                                <p>Find the perfect suit for formal and casual wear.</p>
+                            </div>
+                            <img src="/images/suits.jpg" alt="Suits">
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    Sweaters
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <div class="dropdown-text">
+                                <h3>Luxury Suits</h3>
+                                <p>Find the perfect suit for formal and casual wear.</p>
+                            </div>
+                            <img src="/images/suits.jpg" alt="Suits">
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    Blazers & Coats
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <div class="dropdown-text">
+                                <h3>Luxury Suits</h3>
+                                <p>Find the perfect suit for formal and casual wear.</p>
+                            </div>
+                            <img src="/images/suits.jpg" alt="Suits">
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    Shoes
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <div class="dropdown-text">
+                                <h3>Luxury Suits</h3>
+                                <p>Find the perfect suit for formal and casual wear.</p>
+                            </div>
+                            <img src="/images/suits.jpg" alt="Suits">
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    Editorial
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <div class="dropdown-text">
+                                <h3>Luxury Suits</h3>
+                                <p>Find the perfect suit for formal and casual wear.</p>
+                            </div>
+                            <img src="/images/suits.jpg" alt="Suits">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="options">
+            <div class="img">
+                <a href="search.html">
+                    <img src="/images/search-interface-symbol.png" alt="Search">
+                </a>
+            </div>
+          <div class="img">
+  <% if (!user) { %>
+    <!-- Show Login if not logged in -->
+    <a href="/login">
+      <img src="/images/user-avatar.png" alt="Login">
+    </a>
+  <% } else { %>
+    <!-- Show Logout if logged in -->
+      <a href="/logout">
+      <img src="/images/logout.png" alt="Logout">
+    </a>
+    
+  <% } %>
+</div>
+
+        </div>
+        
+        
+    </div>
+
+     
