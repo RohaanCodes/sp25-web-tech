@@ -1,0 +1,127 @@
+<h1 class="product-heading">🛍️ Our Products</h1>
+
+<div class="cart-button-wrapper">
+  <a href="/cart">
+    <button class="view-cart-btn">🛒 View Cart</button>
+  </a>
+</div>
+
+<div class="products">
+  <% products.forEach(product => { %>
+    <div class="product-card">
+      <img src="<%= product.imageUrl %>" alt="<%= product.title %>" />
+      <h3><%= product.title %></h3>
+      <p class="desc"><%= product.description %></p>
+      <p class="price">Price: $<%= product.price.toFixed(2) %></p>
+      <form action="/cart/add" method="POST">
+        <input type="hidden" name="productId" value="<%= product._id %>" />
+        <button type="submit" class="add-btn">Add to Cart</button>
+      </form>
+    </div>
+  <% }); %>
+</div>
+
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f8fb;
+    padding: 20px;
+    margin: 0;
+  }
+
+  .product-heading {
+    text-align: center;
+    color: #002147;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .cart-button-wrapper {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .view-cart-btn {
+    background-color: #002147;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .view-cart-btn:hover {
+    background-color: #004080;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+  }
+
+  .product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    
+  }
+
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .product-card img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .product-card h3 {
+    color: #002147;
+    margin-top: 15px;
+  }
+
+  .product-card .desc {
+    color: #555;
+    font-size: 0.9rem;
+    margin: 10px 0;
+  }
+
+  .product-card .price {
+    font-weight: bold;
+    margin: 10px 0;
+    color: #004080;
+  }
+
+  .add-btn {
+    background-color: #004080;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .add-btn:hover {
+    background-color: #0055aa;
+  }
+
+  @media (max-width: 600px) {
+    .product-heading {
+      font-size: 1.5rem;
+    }
+
+    .view-cart-btn {
+      font-size: 0.9rem;
+      padding: 10px 16px;
+    }
+  }
+</style>

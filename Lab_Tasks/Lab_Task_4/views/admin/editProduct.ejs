@@ -1,0 +1,78 @@
+<h1 class="edit-title">Edit Product</h1>
+
+<form class="edit-form" action="/admin/products/<%= product._id %>" method="POST">
+  <label for="title">Title:</label>
+  <input type="text" id="title" name="title" value="<%= product.title %>" required />
+
+  <label for="price">Price:</label>
+  <input type="number" id="price" name="price" value="<%= product.price %>" step="0.01" required />
+
+  <label for="description">Description:</label>
+  <textarea id="description" name="description" rows="4" required><%= product.description %></textarea>
+
+  <label for="imageUrl">Image URL:</label>
+  <input type="text" id="imageUrl" name="imageUrl" value="<%= product.imageUrl %>" required />
+
+  <button type="submit">Update Product</button>
+</form>
+
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fb;
+    padding: 40px;
+  }
+
+  .edit-title {
+    text-align: center;
+    color: #002147;
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .edit-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .edit-form label {
+    font-weight: 600;
+    color: #333;
+  }
+
+  .edit-form input,
+  .edit-form textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  .edit-form textarea {
+    resize: vertical;
+  }
+
+  .edit-form button {
+    background-color: #002147;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  }
+
+  .edit-form button:hover {
+    background-color: #00132f;
+  }
+</style>
